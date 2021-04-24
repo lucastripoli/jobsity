@@ -1,0 +1,13 @@
+{
+    "name": "themoviedb_import",
+    "type": "drupal-module",
+    "description": "themoviedb is a module created for import data from themoviedb.org website",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/themoviedb_import",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/themoviedb_import",
+        "source": "http://cgit.drupalcode.org/themoviedb_import",
+    },
+}

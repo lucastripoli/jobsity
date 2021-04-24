@@ -1,0 +1,5 @@
+name: 'themoviedb import'
+type: module
+description: 'themoviedb is a module created for import data from themoviedb.org website'
+core: 8.x
+package: 'Custom'
