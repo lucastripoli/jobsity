@@ -1,0 +1,19 @@
+uuid: fbc335d0-8638-42f2-bbb3-7bbdda566bef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_gallery
+    - node.type.actor
+id: node.actor.field_image_gallery
+field_name: field_image_gallery
+entity_type: node
+bundle: actor
+label: 'Image gallery'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

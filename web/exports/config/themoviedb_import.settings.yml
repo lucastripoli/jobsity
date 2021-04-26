@@ -1,0 +1,8 @@
+themoviedb_api_url: 'https://api.themoviedb.org/3'
+themoviedb_api_key: 61f110f05cde0ede991da37ab30657e8
+themoviedb_movie_url_part: /movie/popular
+themoviedb_count: '5'
+themoviedb_genre_url_part: /genre/movie/list
+themoviedb_language: en-US
+themoviedb_actor_url_part: /person/popular
+themoviedbimage_conf: 'https://image.tmdb.org/t/p/w500/'

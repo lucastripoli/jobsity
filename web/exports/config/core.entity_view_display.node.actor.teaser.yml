@@ -1,0 +1,48 @@
+uuid: fbac58b1-0a7d-498f-a0e5-ff726b7bec6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.actor.body
+    - field.field.node.actor.field_actor_id
+    - field.field.node.actor.field_birthday
+    - field.field.node.actor.field_day_of_death
+    - field.field.node.actor.field_image_gallery
+    - field.field.node.actor.field_movies_related
+    - field.field.node.actor.field_photo
+    - field.field.node.actor.field_place_of_birth
+    - field.field.node.actor.field_popularity
+    - field.field.node.actor.field_website
+    - node.type.actor
+  module:
+    - text
+    - user
+id: node.actor.teaser
+targetEntityType: node
+bundle: actor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_actor_id: true
+  field_birthday: true
+  field_day_of_death: true
+  field_image_gallery: true
+  field_movies_related: true
+  field_photo: true
+  field_place_of_birth: true
+  field_popularity: true
+  field_website: true

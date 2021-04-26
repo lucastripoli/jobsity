@@ -1,0 +1,5 @@
+services:
+  drush9_custom_commands.commands:
+    class: \Drupal\themoviedb_import\Commands\importDrupalCommand
+    tags:
+      - { name: drush.command }

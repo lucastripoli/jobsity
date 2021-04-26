@@ -1,0 +1,14 @@
+themoviedb_import.settings:
+  path: '/admin/config/system/themoviedb'
+  defaults:
+    _form: '\Drupal\themoviedb_import\Form\themoviedb_importForm'
+    _title: 'TheMovieDB Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+themoviedb_import.test:
+  path: '/themoviedb/test'
+  defaults:
+    _controller: 'Drupal\themoviedb_import\Controller\ThemoviedbController::test'
+    title: 'TheMovieDB test access'
+  requirements:
+    _permission: 'administer site configuration'

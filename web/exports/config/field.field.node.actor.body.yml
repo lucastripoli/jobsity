@@ -1,0 +1,23 @@
+uuid: dd4b6247-1458-4f92-a8b6-dec032040360
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.actor
+  module:
+    - text
+id: node.actor.body
+field_name: body
+entity_type: node
+bundle: actor
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

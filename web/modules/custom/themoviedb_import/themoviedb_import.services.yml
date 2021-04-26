@@ -1,0 +1,4 @@
+services:
+  themoviedb_import.controller:
+    class: \Drupal\themoviedb_import\Controller\themoviedbController
+    arguments: ["@http_client"]

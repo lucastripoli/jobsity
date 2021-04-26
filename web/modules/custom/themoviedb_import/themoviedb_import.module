@@ -33,3 +33,52 @@ function themoviedb_import_theme() {
     ],
   ];
 }
+
+function themoviedb_import_form_views_exposed_form_alter(&$form, $form_state, $form_id)
+{
+
+  if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-news-page-1') {
+
+    $options = &drupal_static(__FUNCTION__);
+    if (is_null($options)) {
+      $cid = 'node:article:year';
+      $data = \Drupal::cache()->get($cid);
+      if (!$data) {
+        $options = [];
+        $options[''] = t('- All -');
+        $query = \Drupal::entityQuery('node');
+        $query->condition('type', 'movie')
+          ->condition('status', 1)
+          ->sort('created', 'ASC');
+        $result = $query->execute();
+        if ($result) {
+          $nodes = Node::loadMultiple($result);
+          foreach ($nodes as $node) {
+            $date = $node->created->value;
+            $date = date('Y-m-d H:i:s', $date);
+            if ($date) {
+              $date = new DrupalDateTime($date, new DateTimeZone('UTC'));
+              $year = $date->format('Y');
+              if (!isset($options[$year])) {
+                $options[$year] = $year;
+              }
+            }
+          }
+        }
+
+        $cache_tags = ['node:article:year'];
+        \Drupal::cache()->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+      } else {
+        $options = $data->data;
+      }
+
+    }
+    // change your field type and options here
+    $form['year'] = [
+      '#type' => 'select',
+      '#options' => $options,
+    ];
+  }
+}
+
+

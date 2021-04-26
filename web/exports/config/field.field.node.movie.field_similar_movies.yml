@@ -1,0 +1,19 @@
+uuid: af758e16-8182-4de8-a6c2-dc2fa068a01f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_similar_movies
+    - node.type.movie
+id: node.movie.field_similar_movies
+field_name: field_similar_movies
+entity_type: node
+bundle: movie
+label: 'Similar Movies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

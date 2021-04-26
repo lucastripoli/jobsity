@@ -1,0 +1,19 @@
+uuid: 940c9283-ed82-4734-8220-495d3918c5d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo
+    - node.type.actor
+id: node.actor.field_photo
+field_name: field_photo
+entity_type: node
+bundle: actor
+label: Photo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
