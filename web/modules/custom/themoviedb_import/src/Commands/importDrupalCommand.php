@@ -1,13 +1,14 @@
 <?php
 
-namespace Drupal\drush9_custom_commands\Commands;
+namespace Drupal\themoviedb_import\Commands;
 
 use Drush\Commands\DrushCommands;
+use Drupal\themoviedb_import\Controller\ThemoviedbController;
 
 /**
  * A drush command file.
  *
- * @package Drupal\drush9_custom_commands\Commands
+ * @package Drupal\themoviedb_import\Commands
  */
 class importDrupalCommand extends DrushCommands {
 
@@ -24,11 +25,11 @@ class importDrupalCommand extends DrushCommands {
    *   Reverse the message.
    * @usage themoviedb:import
    */
-  public function message($text) {
+  public function import($text) {
+    $theMovie = new ThemoviedbController();
+    $theMovie->ImportData();
 
-
-
-    $this->output()->writeln($text);
+    $this->output()->writeln("Data as saved");
   }
 
 }
